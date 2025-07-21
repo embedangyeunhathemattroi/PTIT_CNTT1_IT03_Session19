@@ -1,7 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//b1: XD cau truc can thiet
+typedef struct Node {
+    int data;
+    struct Node *left;
+    struct Node *right;
+}Node;
 
+//b2:xay dung ham khoi tao node
+Node* createNode(int data) {
+    Node * node=(Node*)malloc(sizeof(Node));
+    node->data=data;
+    node->left=NULL;
+    node->right=NULL;
+    return node;
+}
 //b3.4:xay dung ham levelorder
 typedef struct Queue {
     Node ** arr;
